@@ -1,11 +1,11 @@
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = {
-  entry: './src/lib.ts',
+  entry: './src/lib.tsx',
   output: {
     filename: '[name].[contenthash:8].js',
     library: {
-      name: 'MyLibrary',
+      name: 'myLibrary',
       type: 'umd',
     },
     clean: true,

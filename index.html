@@ -6,9 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="./dist/main.js"></script>
+    <div id="root"></div>
+    <script src="./dist/main.da5acc6f.js"></script>
     <script>
-        myLibrary.renderAlertDialog();
+        myLibrary.renderAccountDialog({
+            firstName: 'Alex',
+            lastName: 'Cherkashin',
+        }, document.getElementById('root'));
     </script>
 </body>
 </html>

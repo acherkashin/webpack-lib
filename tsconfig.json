@@ -1,14 +1,16 @@
 {
     "include": [
-        "src/lib.ts"
+        "src/lib.tsx"
     ],
     "compilerOptions": {
         "declaration": true,
+        "esModuleInterop": true,
         "emitDeclarationOnly": true,
         "moduleResolution": "node10",
         "isolatedModules": false,
         "module": "UMD",
         "outFile": "./dist/types.d.ts",
+        "jsx": "react"
     },
     "exclude": [
         "node_modules"
