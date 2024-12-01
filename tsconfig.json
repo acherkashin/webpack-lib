@@ -1,0 +1,16 @@
+{
+    "include": [
+        "src/lib.ts"
+    ],
+    "compilerOptions": {
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "moduleResolution": "node10",
+        "isolatedModules": false,
+        "module": "UMD",
+        "outFile": "./dist/types.d.ts",
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
