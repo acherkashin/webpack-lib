@@ -4,11 +4,9 @@
     ],
     "compilerOptions": {
         "declaration": true,
-        "esModuleInterop": true,
         "emitDeclarationOnly": true,
-        "moduleResolution": "node10",
-        "isolatedModules": false,
-        "module": "UMD",
+        "moduleResolution": "bundler",
+        "module": "es2022",
         "outFile": "./dist/types.d.ts",
         "jsx": "react"
     },

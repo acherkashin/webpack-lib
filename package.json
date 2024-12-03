@@ -6,7 +6,7 @@
   "scripts": {
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
-    "build:types": "tsc -p tsconfig.json",
+    "build:types": "tsc -p generate-types-tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
