@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = {
@@ -31,5 +32,10 @@ module.exports = {
     new WebpackManifestPlugin({
       fileName: 'asset-manifest.json',
     }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: 'index.html',
+      scriptLoading: 'blocking', // we don't need to add "defer="defer"" to scripts in index.html
+    })
   ],
 };
