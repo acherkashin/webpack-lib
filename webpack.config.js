@@ -31,6 +31,7 @@ module.exports = {
   plugins: [
     new WebpackManifestPlugin({
       fileName: 'asset-manifest.json',
+      publicPath: './',
     }),
     new HtmlWebpackPlugin({
       inject: true,
