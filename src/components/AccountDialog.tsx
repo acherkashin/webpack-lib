@@ -6,7 +6,7 @@ export interface AccountDialogProps {
 }
 
 export function AccountDialog({ firstName, lastName }: AccountDialogProps) {
-    return <dialog ref={(item) => item.showModal()}>
+    return <dialog ref={(item) => item?.showModal()}>
         <p>
             Hello {firstName}: {lastName}
         </p>
