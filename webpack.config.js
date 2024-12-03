@@ -22,6 +22,11 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    runtimeChunk: {
+      name: entrypoint => `runtime-${entrypoint.name}`,
+    }
+  },
   plugins: [
     new WebpackManifestPlugin({
       fileName: 'asset-manifest.json',
