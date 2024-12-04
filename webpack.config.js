@@ -2,7 +2,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = {
-  entry: './src/lib.tsx',
+  entry: {
+    'my-lib': './src/lib.tsx'
+  },
   output: {
     filename: '[name].[contenthash:8].js',
     library: {
