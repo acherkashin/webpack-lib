@@ -13,7 +13,7 @@ export interface IRenderComponentProps {
 const roots = new Map<HTMLElement, Root>();
 
 export async function renderComponent({ container, component, autoUnmount }: IRenderComponentProps) {
-    const { createRoot } = await import('react-dom/client');
+    const { createRoot } = await import(/* webpackChunkName: "react-dom"*/ 'react-dom/client');
     const isUpdate = roots.has(container);
     const root = isUpdate ? roots.get(container)! : createRoot(container);
 

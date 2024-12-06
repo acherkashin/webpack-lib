@@ -1,5 +1,6 @@
 import React from 'react';
 import { type AccountDialogProps } from './components/AccountDialog';
+import { renderComponent } from './utils/RenderUtils';
 export { useAppStore as AppStore } from './stores/AppStore';
 
 export function renderAlertDialog() {
@@ -7,9 +8,11 @@ export function renderAlertDialog() {
 }
 
 export async function renderAccountDialog(props: AccountDialogProps, container: HTMLElement) {
-    const { createRoot } = await import(/* webpackChunkName: "react-dom"*/ 'react-dom/client');
     const { AccountDialog } = await import(/* webpackChunkName: "account-dialog" */'./components/AccountDialog');
 
-    const root = createRoot(container);
-    return root.render(<AccountDialog {...props} />);
+    return renderComponent({
+        container,
+        component: <AccountDialog {...props} />,
+        autoUnmount: true
+    });
 }
