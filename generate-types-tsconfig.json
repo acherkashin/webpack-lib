@@ -1,6 +1,6 @@
 {
     "include": [
-        "src/lib.tsx"
+        "src/library.tsx"
     ],
     "compilerOptions": {
         "declaration": true,
