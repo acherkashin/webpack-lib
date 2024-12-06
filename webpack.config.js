@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: '[name].[contenthash:8].js',
     library: {
-      name: 'myLibrary',
+      name: 'myLib',
       type: 'umd',
     },
     clean: true,

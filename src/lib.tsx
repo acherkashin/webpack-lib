@@ -1,18 +1,14 @@
 import React from 'react';
-import { type AccountDialogProps } from './components/AccountDialog';
+import { type AppHeaderProps } from './components/AppHeader';
 import { renderComponent } from './utils/RenderUtils';
 export { useAppStore as AppStore } from './stores/AppStore';
 
-export function renderAlertDialog() {
-    alert('Are you sure?');
-}
-
-export async function renderAccountDialog(props: AccountDialogProps, container: HTMLElement) {
-    const { AccountDialog } = await import(/* webpackChunkName: "account-dialog" */'./components/AccountDialog');
+export async function renderAppHeader(props: AppHeaderProps, container: HTMLElement) {
+    const { AppHeader } = await import(/* webpackChunkName: "app-header" */'./components/AppHeader');
 
     return renderComponent({
         container,
-        component: <AccountDialog {...props} />,
+        component: <AppHeader {...props} />,
         autoUnmount: true
     });
 }
